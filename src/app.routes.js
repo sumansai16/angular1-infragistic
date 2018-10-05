@@ -6,7 +6,7 @@ angular
 
 function config ($routeProvider) {
     $routeProvider.
-        when('/', {
+        when('/home', {
             templateUrl: 'sections/home/home.tpl.html',
             controller: 'HomeController as home'
         })
@@ -46,6 +46,6 @@ function config ($routeProvider) {
             }
         })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/home'
         });
 }

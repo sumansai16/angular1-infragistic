@@ -19,90 +19,38 @@ function hcBarChart() {
 
 
             scope.$watch('data', function () {
-                
-                var lastFiveYears = [{
-                        "org2": "Chemical",
-                        "Member_Only": 0,
-                        "Leadership_Role": 1,
-                        "Committee_Member": 10,
-                    },
-                    {
-                        "org2": "Fuels_Lubricants",
-                        "Member_Only": 0,
-                        "Leadership_Role": 4,
-                        "Committee_Member": 0,
-                    },
-                    {
-                        "org2": "Refining_Supply",
-                        "Member_Only": 2,
-                        "Leadership_Role": 207,
-                        "Committee_Member": 423,
-                    },
-                    {
-                        "org2": "IOL",
-                        "Member_Only": 0,
-                        "Leadership_Role": 13,
-                        "Committee_Member": 17,
-                    },
-                ];
-
-                
-                // function generateCategoryXChart(chartType) {
-
-                // var selector = "#" + chartType;
-                var isColumnChart = "stackedColumn".contains("Column");
+                var data = scope.data;
+                var isColumnChart = "stackedBar".contains("Bar");
 
                 $(element).igDataChart({
                     seriesMouseLeftButtonDown: function (evt, ui) {
-                        scope.drilldownurl({ args: ui });
+                        scope.drilldownurl({
+                            args: ui
+                        });
                     },
-                    dataSource: lastFiveYears,
+                    dataSource: data.data,
                     height: "400px",
-                    // width: "400px",
-                    title: "Energy Production Per Country",
-                    subtitle: "The top five Total Primary Energy producers",
-                    axes: [{
-                            name: "org2",
-                            type: "categoryX",
-                            label: "org2",
-                            title: "org2",
-                            gap: 1,
-                        },
-                        {
-                            name: "Volume",
-                            type: "numericY",
-                            title: "Quadrillion Btu"
-                        }
-                    ],
+                    width: "98%",
+                    title: data.title,
+                    subtitle: data.subtitle,
+                    titleTextColor: "black",
+                    titleTextStyle: "11pt Verdona",
+                    titleBottomMargin: 10,
+                    axes: data.axes,
+                    legend: {
+                        element: data.legend,
+                        type: 'legend',
+                        // height: "100px",
+                        width:"98%"
+                    },
                     series: [function () { // a self executing function to create the series initialization object
                         var seriesObj = {
-                            name: "parent",
-                            xAxis: "org2",
-                            yAxis: "Volume",
-                            type: "stackedColumn",
+                            name: data.name,
+                            xAxis: data.xAxis,
+                            yAxis: data.yAxis,
+                            type: "stackedBar",
                             outline: "transparent",
-                            series: [{
-                                name: "Member_Only",
-                                title: "Member_Only",
-                                type: "stackedFragment",
-                                showTooltip: true,
-                                tooltipTemplate: "Member_Only",
-                                valueMemberPath: "Member_Only"
-                            }, {
-                                name: "Leadership_Role",
-                                title: "Leadership_Role",
-                                type: "stackedFragment",
-                                showTooltip: true,
-                                tooltipTemplate: "Leadership_Role",
-                                valueMemberPath: "Leadership_Role"
-                            }, {
-                                name: "Committee_Member",
-                                title: "Committee_Member",
-                                showTooltip: true,
-                                tooltipTemplate: "Committee_Member",
-                                type: "stackedFragment",
-                                valueMemberPath: "Committee_Member"
-                            }]
+                            series: data.series
                         };
                         if (isColumnChart) { //for column charts set the radius to 0
                             seriesObj.radius = 0;
@@ -113,10 +61,6 @@ function hcBarChart() {
                     verticalZoomable: false,
                     windowResponse: "immediate"
                 });
-                // };
-
-                // generateCategoryXChart("stackedColumn");
-
             });
         }
     };

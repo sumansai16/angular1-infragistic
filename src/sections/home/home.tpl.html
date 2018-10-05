@@ -20,16 +20,51 @@
             </div>
         </div>
     </div> -->
-    <div class="container" style="margin-top:50px;">
-        <div class="row">
-            <div class="col-lg-6">
-                    <div class="hc-bar-chart" drilldownurl="showdetail(args)"></div>
-            </div>
-            <div class="col-lg-6">
-                    <div class="pie-chart" drilldownurl="showdetailpie(args)"></div>
+    <div class="container-fluid" style="margin-top:50px;margin-bottom:50px;">
+        <!-- <div class="row"> -->
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hc-column-chart" drilldownurl="showdetail(args)" data="data1"></div>
+                    <div id="legend0" style="margin-top:5px;"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hc-column-chart" drilldownurl="showdetail(args)" data="data2"></div>
+                    <div id="legend1" style="margin-top:5px;"></div>
+                </div>
+                <!-- <div class="col-lg-6">
+                                        <div class="pie-chart" drilldownurl="showdetailpie(args)"></div>
+                                    </div> -->
+                <div class="col-lg-6" style="margin-top:50px;">
+                    <div class="hc-bar-chart" drilldownurl="showdetail(args)" data="data3"></div>
+                    <div id="legend2" style="margin-top:5px;"></div>
+                </div>
+                <div class="col-lg-6" style="margin-top:50px;">
+                    <div class="line-chart" drilldownurl="showdetail(args)" data="data4"></div>
+                    <div id="legend3" style="margin-top:5px;"></div>
+                </div>
             </div>
         </div>
-        
+        <!-- <div class="col-lg-2">
+            <div class="row">
+                <ul class="tutorials">
+                    <li class="">
+                        <h5>Filter</h5>
+
+                        <select class="form-control" >
+                            <option>All</option>
+                            <option>abcd</option>
+                        </select>
+
+
+                        
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+        <!-- </div> -->
+
+
         <!-- <ul class="tutorials">
             <li data-ng-repeat="tutorial in home.tutorials track by $index" data-ng-class="{'offline': (tutorial.link == '#')}">
                 <div class="number">#{{$index + 1}}</div>
@@ -42,4 +77,3 @@
         <p class="no-data tuts">More tutorials coming soon...</p> -->
     </div>
 </div>
- 
