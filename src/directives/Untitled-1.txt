@@ -1,0 +1,103 @@
+var org3 = [{
+                        "org3": "Global_Operations",  //Chemical
+                        "Member_Only": 0,
+                        "Leadership_Role": 1,
+                        "Committee_Member": 10,
+                    },
+                    {
+                        "org3": "Retails_Fuels_GBU", //Fuels_Lubricants
+                        "Member_Only": 0,
+                        "Leadership_Role": 3,
+                        "Committee_Member": 0,
+                    },
+                    {
+                        "org3": "EMEAP_Refining",//Refining_Supply
+                        "Member_Only": 2,
+                        "Leadership_Role": 61,
+                        "Committee_Member": 103,
+                    },
+                    {
+                        "org3": "GVS_Study",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 2,
+                        "Committee_Member": 1,
+                    },
+                    {
+                        "org3": "Midstream",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 83,
+                        "Committee_Member": 138,
+                    },
+                    {
+                        "org3": "North_America_Refining",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 44,
+                        "Committee_Member": 38,
+                    },
+                    {
+                        "org3": "Op_Support",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 3,
+                        "Committee_Member": 53,
+                    },
+
+                     {
+                        "org3": "Stragey_planning",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 7,
+                        "Committee_Member": 33,
+                    },
+                     {
+                        "org3": "Supply_Transportation",//Refining_Supply
+                        "Member_Only": 2,
+                        "Leadership_Role": 7,
+                        "Committee_Member": 55,
+                    },
+                    {
+                        "org3": "1552", //IOL
+                        "Member_Only": 0,
+                        "Leadership_Role": 13,
+                        "Committee_Member": 17,
+                    },
+                ];
+
+
+                //paction and prole
+
+                var org3 = [{
+                        "org3": "KEEP",  //Chemical
+                        "Member_Only": 2,
+                        "Leadership_Role": 189,
+                        "Committee_Member": 359,
+                    },
+                    {
+                        "org3": "NEW", //Fuels_Lubricants
+                        "Member_Only": 0,
+                        "Leadership_Role": 56,
+                        "Committee_Member": 87,
+                    },
+                    {
+                        "org3": "NEW_ROLE",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 0,
+                        "Committee_Member": 10,
+                    },
+                    {
+                        "org3": "Reject",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 0,
+                        "Committee_Member": 1,
+                    },
+                    {
+                        "org3": "Remove",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 0,
+                        "Committee_Member": 0,
+                    },
+                    {
+                        "org3": "Review",//Refining_Supply
+                        "Member_Only": 0,
+                        "Leadership_Role": 0,
+                        "Committee_Member": 0,
+                    },
+                ];

@@ -19,236 +19,34 @@ function hcBarChart() {
 
 
             scope.$watch('data', function () {
-                var data = [{
-                        "Year": 1995,
-                        "Canada": 16.8331,
-                        "SaudiArabia": 20.6591,
-                        "Russia": 41.4181,
-                        "UnitedStates": 71.1744,
-                        "China": 33.5387,
-                    },
-                    {
-                        "Year": 1996,
-                        "Canada": 17.2262,
-                        "SaudiArabia": 20.8153,
-                        "Russia": 39.9461,
-                        "UnitedStates": 72.4860,
-                        "China": 35.1037,
-                    },
-                    {
-                        "Year": 1997,
-                        "Canada": 17.4787,
-                        "SaudiArabia": 21.2433,
-                        "Russia": 38.7414,
-                        "UnitedStates": 72.4715,
-                        "China": 38.4407,
-                    },
-                    {
-                        "Year": 1998,
-                        "Canada": 17.4377,
-                        "SaudiArabia": 21.4151,
-                        "Russia": 39.0652,
-                        "UnitedStates": 72.8764,
-                        "China": 38.8876,
-                    },
-                    {
-                        "Year": 1999,
-                        "Canada": 17.6813,
-                        "SaudiArabia": 20.1783,
-                        "Russia": 40.8088,
-                        "UnitedStates": 71.7420,
-                        "China": 37.5003,
-                    },
-                    {
-                        "Year": 2000,
-                        "Canada": 18.1283,
-                        "SaudiArabia": 21.5931,
-                        "Russia": 41.6954,
-                        "UnitedStates": 71.3322,
-                        "China": 38.7841,
-                    },
-                    {
-                        "Year": 2001,
-                        "Canada": 18.0215,
-                        "SaudiArabia": 20.9456,
-                        "Russia": 42.6263,
-                        "UnitedStates": 71.7343,
-                        "China": 41.6730,
-                    },
-                    {
-                        "Year": 2002,
-                        "Canada": 18.3578,
-                        "SaudiArabia": 20.2696,
-                        "Russia": 44.1627,
-                        "UnitedStates": 70.7132,
-                        "China": 46.2297,
-                    },
-                    {
-                        "Year": 2003,
-                        "Canada": 18.3074,
-                        "SaudiArabia": 23.0489,
-                        "Russia": 47.1823,
-                        "UnitedStates": 69.9627,
-                        "China": 51.2491,
-                    },
-                    {
-                        "Year": 2004,
-                        "Canada": 18.6642,
-                        "SaudiArabia": 24.1590,
-                        "Russia": 49.8648,
-                        "UnitedStates": 70.2224,
-                        "China": 55.9233,
-                    },
-                    {
-                        "Year": 2005,
-                        "Canada": 18.8932,
-                        "SaudiArabia": 25.4401,
-                        "Russia": 51.0796,
-                        "UnitedStates": 69.4437,
-                        "China": 63.9524,
-                    },
-                    {
-                        "Year": 2006,
-                        "Canada": 19.2273,
-                        "SaudiArabia": 24.6105,
-                        "Russia": 52.0557,
-                        "UnitedStates": 70.7539,
-                        "China": 68.2333,
-                    },
-                    {
-                        "Year": 2007,
-                        "Canada": 19.5439,
-                        "SaudiArabia": 23.7326,
-                        "Russia": 52.5599,
-                        "UnitedStates": 71.4000,
-                        "China": 73.2809,
-                    },
-                    {
-                        "Year": 2008,
-                        "Canada": 19.0196,
-                        "SaudiArabia": 25.1682,
-                        "Russia": 52.5460,
-                        "UnitedStates": 73.2178,
-                        "China": 78.3599,
-                    },
-                    {
-                        "Year": 2009,
-                        "Canada": 18.3249,
-                        "SaudiArabia": 22.837,
-                        "Russia": 50.4291,
-                        "UnitedStates": 72.6409,
-                        "China": 84.0643,
-                    },
-                    {
-                        "Year": 2010,
-                        "Canada": 18.3358,
-                        "SaudiArabia": 24.7442,
-                        "Russia": 53.2232,
-                        "UnitedStates": 74.7951,
-                        "China": 90.3918,
-                    },
-                ];
-
+                
                 var lastFiveYears = [{
-                        "Year": 2005,
-                        "Canada": 18.8932,
-                        "SaudiArabia": 25.4401,
-                        "Russia": 51.0796,
-                        "UnitedStates": 69.4437,
-                        "China": 63.9524,
+                        "org2": "Chemical",
+                        "Member_Only": 0,
+                        "Leadership_Role": 1,
+                        "Committee_Member": 10,
                     },
                     {
-                        "Year": 2006,
-                        "Canada": 19.2273,
-                        "SaudiArabia": 24.6105,
-                        "Russia": 52.0557,
-                        "UnitedStates": 70.7539,
-                        "China": 68.2333,
+                        "org2": "Fuels_Lubricants",
+                        "Member_Only": 0,
+                        "Leadership_Role": 4,
+                        "Committee_Member": 0,
                     },
                     {
-                        "Year": 2007,
-                        "Canada": 19.5439,
-                        "SaudiArabia": 23.7326,
-                        "Russia": 52.5599,
-                        "UnitedStates": 71.4000,
-                        "China": 73.2809,
+                        "org2": "Refining_Supply",
+                        "Member_Only": 2,
+                        "Leadership_Role": 207,
+                        "Committee_Member": 423,
                     },
                     {
-                        "Year": 2008,
-                        "Canada": 19.0196,
-                        "SaudiArabia": 25.1682,
-                        "Russia": 52.5460,
-                        "UnitedStates": 73.2178,
-                        "China": 78.3599,
-                    },
-                    {
-                        "Year": 2009,
-                        "Canada": 18.3249,
-                        "SaudiArabia": 22.837,
-                        "Russia": 50.4291,
-                        "UnitedStates": 72.6409,
-                        "China": 84.0643,
-                    },
-                    {
-                        "Year": 2010,
-                        "Canada": 18.3358,
-                        "SaudiArabia": 24.7442,
-                        "Russia": 53.2232,
-                        "UnitedStates": 74.7951,
-                        "China": 90.3918,
-                    }
-                ];
-
-                var everyThreeYears = [{
-                        "Year": 1995,
-                        "Canada": 16.8331,
-                        "SaudiArabia": 20.6591,
-                        "Russia": 41.4181,
-                        "UnitedStates": 71.1744,
-                        "China": 33.5387,
-                    },
-                    {
-                        "Year": 1998,
-                        "Canada": 17.4377,
-                        "SaudiArabia": 21.4151,
-                        "Russia": 39.0652,
-                        "UnitedStates": 72.8764,
-                        "China": 38.8876,
-                    },
-                    {
-                        "Year": 2001,
-                        "Canada": 18.0215,
-                        "SaudiArabia": 20.9456,
-                        "Russia": 42.6263,
-                        "UnitedStates": 71.7343,
-                        "China": 41.6730,
-                    },
-                    {
-                        "Year": 2004,
-                        "Canada": 18.6642,
-                        "SaudiArabia": 24.1590,
-                        "Russia": 49.8648,
-                        "UnitedStates": 70.2224,
-                        "China": 55.9233,
-                    },
-                    {
-                        "Year": 2007,
-                        "Canada": 19.5439,
-                        "SaudiArabia": 23.7326,
-                        "Russia": 52.5599,
-                        "UnitedStates": 71.4000,
-                        "China": 73.2809,
-                    },
-                    {
-                        "Year": 2010,
-                        "Canada": 18.3358,
-                        "SaudiArabia": 24.7442,
-                        "Russia": 53.2232,
-                        "UnitedStates": 74.7951,
-                        "China": 90.3918,
+                        "org2": "IOL",
+                        "Member_Only": 0,
+                        "Leadership_Role": 13,
+                        "Committee_Member": 17,
                     },
                 ];
 
+                
                 // function generateCategoryXChart(chartType) {
 
                 // var selector = "#" + chartType;
@@ -264,10 +62,10 @@ function hcBarChart() {
                     title: "Energy Production Per Country",
                     subtitle: "The top five Total Primary Energy producers",
                     axes: [{
-                            name: "Year",
+                            name: "org2",
                             type: "categoryX",
-                            label: "Year",
-                            title: "Year",
+                            label: "org2",
+                            title: "org2",
                             gap: 1,
                         },
                         {
@@ -279,45 +77,31 @@ function hcBarChart() {
                     series: [function () { // a self executing function to create the series initialization object
                         var seriesObj = {
                             name: "parent",
-                            xAxis: "Year",
+                            xAxis: "org2",
                             yAxis: "Volume",
                             type: "stackedColumn",
                             outline: "transparent",
                             series: [{
-                                name: "China",
-                                title: "China",
+                                name: "Member_Only",
+                                title: "Member_Only",
                                 type: "stackedFragment",
                                 showTooltip: true,
-                                tooltipTemplate: "China",
-                                valueMemberPath: "China"
+                                tooltipTemplate: "Member_Only",
+                                valueMemberPath: "Member_Only"
                             }, {
-                                name: "United States",
-                                title: "United States",
+                                name: "Leadership_Role",
+                                title: "Leadership_Role",
                                 type: "stackedFragment",
                                 showTooltip: true,
-                                tooltipTemplate: "United States",
-                                valueMemberPath: "UnitedStates"
+                                tooltipTemplate: "Leadership_Role",
+                                valueMemberPath: "Leadership_Role"
                             }, {
-                                name: "Russia",
-                                title: "Russia",
+                                name: "Committee_Member",
+                                title: "Committee_Member",
                                 showTooltip: true,
-                                tooltipTemplate: "Russia",
+                                tooltipTemplate: "Committee_Member",
                                 type: "stackedFragment",
-                                valueMemberPath: "Russia"
-                            }, {
-                                name: "Saudi Arabia",
-                                title: "Saudi Arabia",
-                                showTooltip: true,
-                                tooltipTemplate: "Saudi Arabia",
-                                type: "stackedFragment",
-                                valueMemberPath: "SaudiArabia"
-                            }, {
-                                name: "Canada",
-                                title: "Canada",
-                                showTooltip: true,
-                                tooltipTemplate: "Canada",
-                                type: "stackedFragment",
-                                valueMemberPath: "Canada"
+                                valueMemberPath: "Committee_Member"
                             }]
                         };
                         if (isColumnChart) { //for column charts set the radius to 0
